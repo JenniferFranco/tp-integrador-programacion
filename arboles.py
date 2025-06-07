@@ -1,13 +1,15 @@
+#Definimos clase Nodo: representa cada pregunta o diagnostico final del arbol de decision
 class Nodo:
     def __init__(self, texto, hijo_si=None, hijo_no=None): 
-        self.texto = texto
-        self.hijo_si = hijo_si 
-        self.hijo_no = hijo_no
+        self.texto = texto          #texto de la pregunta diagnostico
+        self.hijo_si = hijo_si      #rama del arbol en caso de la respuesta "si"
+        self.hijo_no = hijo_no      #rama del arbol en caso de la respuesta "no"
         
+#Definimos la clase ArbolDeDecision: implementa el arbol binario de decision 
 class ArbolDeDecision: 
     def __init__(self):
         
-        #Diagnosticos finales (nodo hoja)
+        #Diagnosticos finales (nodos hoja)
         diag_covid = Nodo('Diagnóstico: Caso compatible con COVID-19 moderado o severo. Consulte al médico.')
         diag_posible_covid = Nodo('Diagnóstico: Posible caso de COVID-19. Controle síntomas.')
         diag_covid_poco_probable =Nodo('Diagnóstico: Poco probable que sea COVID-19.')
@@ -22,25 +24,29 @@ class ArbolDeDecision:
         
         nodo_fiebre = Nodo('¿Tiene fiebre?', nodo_tos, nodo_garganta)
         
-        # Raíz del árbol
+        # Nodo Raiz del árbol
         self.raiz = nodo_fiebre
         
     def iniciar_diag (self):
-        nodo_actual = self.raiz 
+        nodo_actual = self.raiz #Comienza desde la raiz del arbol 
+        #Mientras el Nodo tenga hijos continuara haciendo preguntas
         while nodo_actual.hijo_si or nodo_actual.hijo_no:
-            respuesta = input(nodo_actual.texto +  " (si/no): ").strip().lower()
+            respuesta = input(nodo_actual.texto +  " (si/no): ").strip().lower() 
+            #Validar las respuestas del usuario
             while respuesta not in ("si", "no"): 
                 print("Por favor, responda 'sí' o 'no'.")
                 respuesta = input(nodo_actual.texto + " (si/no): ").strip().lower()
                 
-                
+            #Avanza al siguiente Nodo segun la respuesta
             if respuesta == "si":
                 nodo_actual = nodo_actual.hijo_si 
             else:
                 nodo_actual = nodo_actual.hijo_no 
-                    
+
+        #Imprime el diagnostico final (Nodo hoja)            
         print("\n" + nodo_actual.texto)
-        
+
+#Programa principal        
 print("Sistema Simplificado de Diagnóstico COVID-19\n")
 arbol = ArbolDeDecision()
 arbol.iniciar_diag()
