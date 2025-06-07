@@ -15,10 +15,6 @@ El objetivo de este proyecto es aplicar los conceptos de estructuras de datos no
   - **Nodo:** representa preguntas y posibles diagnósticos, con referencias a hijos izquierdo y derecho.
   - **ÁrbolDeDecisión:** organiza la estructura completa y gestiona la interacción con el usuario.
 - Explicación del recorrido del árbol: cómo se simula la toma de decisiones.
-- Código fuente dividido en módulos:
-  - `main.py`: archivo principal que ejecuta el programa.
-  - `nodo.py`: define la clase Nodo.
-  - `arbol_decision.py`: define la clase ÁrbolDeDecisión.
 - Instrucciones para ejecutar el programa desde la consola.
 
 ## 🚀 Cómo Ejecutar el Programa
@@ -39,8 +35,8 @@ El objetivo de este proyecto es aplicar los conceptos de estructuras de datos no
 - **Carrera:** Tecnicatura Universitaria en Programación
 - **Materia:** Programación I
 - **Comision:** 13
-- **Docente Titular:** Osvaldo Falabella
-- **Docente Tutor:** Patricio Costello
+- **Docente Titular:** Ariel Enferrel
+- **Docente Tutor:** Franco Gonzalez
 
 ## 🔗 Enlaces
 
