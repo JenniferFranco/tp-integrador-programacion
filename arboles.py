@@ -25,3 +25,18 @@ class ArbolDeDecision:
         # Raíz del árbol
         self.raiz = nodo_fiebre
         
+    def iniciar_diag (self):
+        nodo_actual = self.raiz 
+        while nodo_actual.hijo_si or nodo_actual.hijo_no:
+            respuesta = input(nodo_actual.texto +  " (si/no): ").strip().lower()
+            while respuesta not in ("si", "no"): 
+                print("Por favor, responda 'sí' o 'no'.")
+                respuesta = input(nodo_actual.texto + " (si/no): ").strip().lower()
+                
+                
+            if respuesta == "si":
+                nodo_actual = nodo_actual.hijo_si 
+            else:
+                nodo_actual = nodo_actual.hijo_no 
+                    
+        print("\n" + nodo_actual.texto)
