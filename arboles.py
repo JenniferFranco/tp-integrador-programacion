@@ -40,3 +40,8 @@ class ArbolDeDecision:
                 nodo_actual = nodo_actual.hijo_no 
                     
         print("\n" + nodo_actual.texto)
+        
+print("Sistema Simplificado de Diagnóstico COVID-19\n")
+arbol = ArbolDeDecision()
+arbol.iniciar_diag()
+print("\nGracias por utilizar el sistema. ¡Cuídese!")
