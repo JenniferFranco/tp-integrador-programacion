@@ -22,9 +22,9 @@ El objetivo de este proyecto es aplicar los conceptos de estructuras de datos no
 1. Instalar Python 3 en el sistema operativo.
 2. Descargar o clonar este repositorio.
 3. Abrir una terminal o consola y ubicar la carpeta del proyecto.
-4. Ejecutar el archivo principal con:
+4. Ejecutar el archivo arboles.py con el siguiente comando:
    ```bash
-   python main.py
+   python arboles.py
 ## 👥 Autores
 
 - Jennifer Franco (jennyfranco31.jf@gmail.com)
@@ -40,8 +40,8 @@ El objetivo de este proyecto es aplicar los conceptos de estructuras de datos no
 
 ## 🔗 Enlaces
 
-- Repositorio de GitHub (añadir URL)
+- Repositorio de GitHub: https://github.com/JenniferFranco/tp-integrador-programacion.git 
 
 
-Video explicativo 
+- Video explicativo 
 
