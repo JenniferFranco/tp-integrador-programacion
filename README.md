@@ -43,5 +43,5 @@ El objetivo de este proyecto es aplicar los conceptos de estructuras de datos no
 - Repositorio de GitHub: https://github.com/JenniferFranco/tp-integrador-programacion.git 
 
 
-- Video explicativo 
+- Video explicativo: https://youtu.be/5WyVNpVQBYQ
 
